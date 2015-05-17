@@ -1,0 +1,55 @@
+@-webkit-keyframes whitefirst {
+    0% {border-color: white black;}
+    50% {border-color: black white;}
+    100% {border-color: white black;}
+}
+
+@keyframes whitefirst {
+    0% {border-color: white black;}
+    50% {border-color: black white;}
+    100% {border-color: white black;}
+}
+
+@-webkit-keyframes blackfirst {
+    0% {border-color: black white;}
+    50% {border-color: white black;}
+    100% {border-color: black white;}
+}
+
+@keyframes blackfirst {
+    0% {border-color: black white;}
+    50% {border-color: white black;}
+    100% {border-color: black white;}
+}
+
+.row div {
+  width: 0;
+  height: 0;
+  float: left;
+  border: 5vw solid black;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.row:nth-child(2n) div:nth-child(2n) {
+  -webkit-animation: whitefirst 4s linear infinite;
+  animation: whitefirst 4s linear infinite;
+}
+
+.row:nth-child(2n) div:nth-child(2n-1) {
+  -webkit-animation: blackfirst 5s linear infinite;
+  animation: blackfirst 5s linear infinite;
+}
+
+.row:nth-child(2n-1) div:nth-child(2n-1) {
+  -webkit-animation: whitefirst 6s linear infinite;
+  animation: whitefirst 6s linear infinite;
+}
+
+.row:nth-child(2n-1) div:nth-child(2n) {
+  -webkit-animation: blackfirst 7s linear infinite;
+  animation: blackfirst 7s linear infinite;
+}
